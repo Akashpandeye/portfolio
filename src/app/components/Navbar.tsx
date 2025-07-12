@@ -11,6 +11,17 @@ import { useRef } from 'react'
 const Navbar = () => {
     
   const sideMenu = useRef<HTMLUListElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const openSideMenu = () => {
     if (sideMenu.current) {
@@ -28,12 +39,11 @@ const Navbar = () => {
     <div className='top-0 right-0 fixed w11/12 -z-10 translate-y-[-80%]'>
         <Image src={assets.header_bg_color} alt="" className='w-full h-full object-cover'/>
     </div>
-        <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 justify-between flex items-center z-50'>
+        <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 justify-between flex items-center z-50 bg-white shadow-sm md:bg-transparent md:shadow-none`}>
             <a href="#top">    
                 <Image src={logo} className='w-28 cursor-pointer mr-14' alt="logo" width={100} height={100} />
             </a>
-            <ul className='hidden md:flex lg:flex-row items-center gap-8 lg:gap-10  
-            rounded-full  px-12 py-3 bg-white shadow-sm bg-opacity-50 backdrop-blur-sm'>
+            <ul className={`hidden md:flex lg:flex-row items-center gap-8 lg:gap-10 rounded-full px-12 py-3 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
                 <li>
                     <a className='font-ovo' href="#top">Home</a>    
                 </li>
@@ -50,7 +60,7 @@ const Navbar = () => {
 
             <div className='flex items-center gap-4 pl-10  '>
                 <button>
-                    <Image src={assets.moon_icon} alt="" className='w-5 md:w-6'/>
+                    <Image src={assets.moon_icon} alt="" className='w-5 md:w-6 '/>
                 </button>
                 <a href="#contact" className='hidden md:flex lg:flex items-center gap-3 rounded-full px-10 py-2.5 ml-4 border border-gray-300'>
                     Contact Me 
