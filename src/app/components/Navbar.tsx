@@ -64,7 +64,7 @@ const Navbar = () => {
 
             {/* mobile menu */}
 
-            <ul ref={sideMenu} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50  transition duration-500 '>
+            <ul ref={sideMenu} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-45 z-50 h-screen bg-rose-50  transition duration-500 '>
                 <div className='absolute top-6 right-6' onClick={closeSideMenu}>
                     <Image src={assets.close_black} alt="" className='w-5 cursor-pointer' />
                 </div>
