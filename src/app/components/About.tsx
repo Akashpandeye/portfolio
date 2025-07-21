@@ -12,11 +12,11 @@ const About = () => {
         <h2 className='text-center text-5xl font-ovo '>
             About Me
         </h2>
-        <div className='flex flex-col lg:flex-row gap-10 my-8 w-full items-center justify-center'>
+        <div className='flex flex-col lg:flex-row gap-10 my-8 w-full items-center justify-center max-w-5xl mx-auto'>
             <div className='w-64 sm:w-80 rounded-3xl max-w-none mx-auto'>
                 <Image src={assets.user_image} alt="user" className='w-full h-full rounded-3xl ' />
             </div>
-            <div className='w-full flex-1 flex flex-col items-start'>
+            <div className='w-full flex-1 flex flex-col items-start max-w-2xl'>
               <p className='max-w-xl mb-6'>
                 I'm a software engineer with a passion for building web applications.
                 I am a quick learner and I am always looking to improve my skills.
