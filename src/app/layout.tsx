@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   title: "akash-works",
   description: "Akash's Portfolio",
   icons: {
-    icon: "/icon",
-    shortcut: "/icon",
-    apple: "/icon",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 

@@ -1,7 +1,7 @@
 'use client'
 
 import Navbar from "../components/Navbar";
-import { workData } from "@/assets/assets";
+import { motion } from "motion/react";
 
 export default function WorkPage() {
   return (
@@ -14,17 +14,16 @@ export default function WorkPage() {
           Projects and product work I have built.
         </p>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {workData.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-2xl border border-stone-200 dark:border-zinc-700 p-6 bg-stone-100/80 dark:bg-zinc-900/80"
-            >
-              <p className="text-sm text-stone-500 dark:text-zinc-300">{item.description}</p>
-              <h2 className="text-2xl mt-2 font-semibold">{item.title}</h2>
-            </article>
-          ))}
-        </section>
+        <div className="flex items-center justify-center py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="rounded-2xl border border-stone-200 dark:border-zinc-700 bg-stone-100/80 dark:bg-zinc-900/80 px-12 py-10 text-center"
+          >
+            <p className="text-2xl font-ovo text-stone-600 dark:text-zinc-300">Updating Soon</p>
+          </motion.div>
+        </div>
         </div>
       </main>
     </>
