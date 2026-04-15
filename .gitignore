@@ -40,14 +40,20 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# editor
+# editor / IDE
 .vscode/
 .idea/
+.cursor/
 *.swp
 *.swo
 
 # os
 Thumbs.db
+.DS_Store
 
 # logs
 *.log
+
+# package manager lock (optional)
+yarn.lock
+pnpm-lock.yaml
