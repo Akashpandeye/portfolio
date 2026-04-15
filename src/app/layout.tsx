@@ -17,6 +17,11 @@ const ovo = Ovo({
 export const metadata: Metadata = {
   title: "akash-works",
   description: "Akash's Portfolio",
+  icons: {
+    icon: "/icon",
+    shortcut: "/icon",
+    apple: "/icon",
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden`}
+        className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden bg-stone-50 text-stone-900 dark:bg-zinc-900 dark:text-zinc-100 transition-colors duration-300`}
       >
         {children}
       </body>
