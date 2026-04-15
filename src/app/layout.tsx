@@ -17,11 +17,6 @@ const ovo = Ovo({
 export const metadata: Metadata = {
   title: "akash-works",
   description: "Akash's Portfolio",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
