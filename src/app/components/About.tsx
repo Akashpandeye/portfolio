@@ -37,7 +37,7 @@ const About = () => {
       className='w-full mt-4'
     >
       <div className='w-full max-w-4xl mx-auto'>
-        <p className='text-sm text-stone-500 dark:text-zinc-400 mb-2 text-center font-ovo'>Tools I have used</p>
+        <p className='text-sm text-stone-500 dark:text-zinc-400 mb-2 text-center font-ovo'>Tools and Technologies I have used</p>
         <div className='bg-stone-100/70 dark:bg-zinc-900/70 py-4'>
           <Marquee speed={40} gradient={false} pauseOnHover>
             {toolStack.map((tool) => (
