@@ -15,8 +15,40 @@ const ovo = Ovo({
 });
 
 export const metadata: Metadata = {
-  title: "akash-works",
-  description: "Akash's Portfolio",
+  metadataBase: new URL("https://akash-works.vercel.app"),
+  title: {
+    default: "Akash Works | Full-Stack Developer Portfolio",
+    template: "%s | Akash Works",
+  },
+  description:
+    "Portfolio of Akash, a full-stack developer building modern web experiences with Next.js, React, and backend services.",
+  keywords: [
+    "Akash",
+    "Akash portfolio",
+    "full-stack developer",
+    "Next.js developer",
+    "React portfolio",
+    "web developer",
+  ],
+  openGraph: {
+    title: "Akash Works | Full-Stack Developer Portfolio",
+    description:
+      "Explore Akash's projects, skills, and experience building modern full-stack web applications.",
+    url: "https://akash-works.vercel.app",
+    siteName: "Akash Works",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Akash Works | Full-Stack Developer Portfolio",
+    description:
+      "Explore Akash's projects, skills, and experience building modern full-stack web applications.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
